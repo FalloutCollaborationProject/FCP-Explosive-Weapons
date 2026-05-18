@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Explosive Weapons __________-->
+
+    <!-- 25mm Grenade Launcher -->
+
+    <ThingDef ParentName="FCP_Simple_Gun_Base">
+        <defName>FCP_Gun_25MM_Grenade_Launcher</defName>
+        <label>25mm Grenade Launcher</label>
+        <description>A single-shot grenade launcher chambered for 25mm grenades. Lighter and more portable than most explosive weapons, making it popular among wastelanders who need indirect fire capability without the bulk of heavier launchers.</description>
+        <smeltable>false</smeltable>
+        <graphicData>
+            <texPath>Weapons/Explosive/FCP_25MM_Grenade_Launcher</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>750</MarketValue>
+            <Mass>6.5</Mass>
+            <AccuracyTouch>0.50</AccuracyTouch>
+            <AccuracyShort>0.60</AccuracyShort>
+            <AccuracyMedium>0.70</AccuracyMedium>
+            <AccuracyLong>0.65</AccuracyLong>
+            <RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_25MM_Grenade_Launcher</li>
+            <li>FCP_Heavy_Weapon</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_GrenadeFrag</defaultProjectile>
+                <forcedMissRadius>0.9</forcedMissRadius>
+                <warmupTime>1.8</warmupTime>
+                <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+                <range>28</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>GrenadeGun_Shot</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>10</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Grenade Machine Gun -->
+
+    <ThingDef ParentName="FCP_Simple_Gun_Base">
+        <defName>FCP_Gun_Grenade_Machinegun</defName>
+        <label>Grenade Machine Gun</label>
+        <description>A belt-fed automatic grenade launcher firing 40mm grenades in rapid succession. Originally designed for vehicle mounting, it was adapted for power armor infantry use. The high rate of fire allows it to saturate an area with explosives, making it effective for area denial and defensive operations.</description>
+        <smeltable>false</smeltable>
+        <graphicData>
+            <texPath>Weapons/Explosive/FCP_Grenade_Machinegun</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>1350</MarketValue>
+            <Mass>16.5</Mass>
+            <AccuracyTouch>0.30</AccuracyTouch>
+            <AccuracyShort>0.40</AccuracyShort>
+            <AccuracyMedium>0.55</AccuracyMedium>
+            <AccuracyLong>0.50</AccuracyLong>
+            <RangedWeapon_Cooldown>3.8</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade_Machinegun</li>
+            <li>FCP_Heavy_Weapon</li>
+            <li>FCP_Power_Armor_Required</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_GrenadeFrag</defaultProjectile>
+                <forcedMissRadius>1.5</forcedMissRadius>
+                <warmupTime>2.8</warmupTime>
+                <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+                <range>30</range>
+                <burstShotCount>8</burstShotCount>
+                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+                <soundCast>GrenadeGun_Shot</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>15</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>15</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+            <li Class="FCP.Core.Backpacks.CompProperties_WeaponBackpack">
+                <backpackTexPath>Things/Pawn/Backpacks/Ammo_Backpack/FCP_Ammo_Backpack</backpackTexPath>
+                <backpackScale>1.0</backpackScale>
+                <drawBackOnlyWhenDrafted>false</drawBackOnlyWhenDrafted>
+                <northOffset>(0, 0.04, -0.10)</northOffset>
+                <southOffset>(0, -0.04, -0.10)</southOffset>
+                <eastOffset>(-0.3, 0.04, -0.10)</eastOffset>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="FCP.Core.WeaponRequirementExtension">
+                <requirements>
+                    <li Class="FCP.Core.WeaponRequirement_AnyInner">
+                        <requirements>
+                            <li Class="FCP.Core.WeaponRequirement_AnyApparel">
+                                <requiredApparel>
+                                    <li MayRequire="Rick.FCP.PowerArmor">FCP_Apparel_Power_Armor_Frame</li>
+                                </requiredApparel>
+                            </li>
+                        </requirements>
+                    </li>
+                </requirements>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Missile Launcher -->
+
+    <ThingDef ParentName="FCP_Simple_Gun_Base">
+        <defName>FCP_Gun_Missile_Launcher</defName>
+        <label>Missile Launcher</label>
+        <description>A pre-war shoulder-fired missile launcher. Fires fin-stabilized high-explosive missiles effective against armored targets and structures. Simple, reliable, and still highly valued in the wasteland despite the scarcity of ammunition.</description>
+        <smeltable>false</smeltable>
+        <graphicData>
+            <texPath>Weapons/Explosive/FCP_Missile_Launcher</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>1100</MarketValue>
+            <Mass>10.0</Mass>
+            <AccuracyTouch>0.45</AccuracyTouch>
+            <AccuracyShort>0.55</AccuracyShort>
+            <AccuracyMedium>0.65</AccuracyMedium>
+            <AccuracyLong>0.70</AccuracyLong>
+            <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Missile_Launcher</li>
+            <li>FCP_Heavy_Weapon</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_Rocket</defaultProjectile>
+                <forcedMissRadius>1.0</forcedMissRadius>
+                <warmupTime>3.5</warmupTime>
+                <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+                <range>38</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>InfernoCannon_Fire</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <muzzleFlashScale>16</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Rockwell Big Bazooka -->
+
+    <ThingDef ParentName="FCP_Simple_Gun_Base">
+        <defName>FCP_Gun_Rockwell_Big_Bazooka</defName>
+        <label>Rockwell Big Bazooka</label>
+        <description>The Rockwell Big Bazooka features a unique triple-barrel design that fires rockets in rapid succession. Heavy and difficult to aim, but the concentrated firepower can overwhelm targets quickly. Requires considerable strength to carry and operate.</description>
+        <smeltable>false</smeltable>
+        <graphicData>
+            <texPath>Weapons/Explosive/FCP_Rockwell_Big_Bazooka</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>1150</MarketValue>
+            <Mass>12.0</Mass>
+            <AccuracyTouch>0.40</AccuracyTouch>
+            <AccuracyShort>0.50</AccuracyShort>
+            <AccuracyMedium>0.55</AccuracyMedium>
+            <AccuracyLong>0.50</AccuracyLong>
+            <RangedWeapon_Cooldown>5.0</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Rockwell_Big_Bazooka</li>
+            <li>FCP_Heavy_Weapon</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_Rocket</defaultProjectile>
+                <forcedMissRadius>1.8</forcedMissRadius>
+                <warmupTime>3.8</warmupTime>
+                <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+                <range>35</range>
+                <burstShotCount>2</burstShotCount>
+                <ticksBetweenBurstShots>25</ticksBetweenBurstShots>
+                <soundCast>InfernoCannon_Fire</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <muzzleFlashScale>18</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>13</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Fatman -->
+
+    <ThingDef ParentName="FCP_Simple_Gun_Base">
+        <defName>FCP_Gun_Fatman</defName>
+        <label>Fat Man</label>
+        <description>The M42 Fat Man is a portable nuclear catapult that launches miniature atomic warheads. Originally issued to power armor units during the war, it remains one of the most destructive man-portable weapons ever created. Extreme caution advised when operating near friendly forces.</description>
+        <smeltable>false</smeltable>
+        <graphicData>
+            <texPath>Weapons/Explosive/FCP_Fatman</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>2200</MarketValue>
+            <Mass>14.0</Mass>
+            <AccuracyTouch>0.50</AccuracyTouch>
+            <AccuracyShort>0.60</AccuracyShort>
+            <AccuracyMedium>0.65</AccuracyMedium>
+            <AccuracyLong>0.60</AccuracyLong>
+            <RangedWeapon_Cooldown>6.0</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Fatman</li>
+            <li>FCP_Heavy_Weapon</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_DoomsdayRocket</defaultProjectile>
+                <forcedMissRadius>2.5</forcedMissRadius>
+                <warmupTime>5.0</warmupTime>
+                <ai_AvoidFriendlyFireRadius>10</ai_AvoidFriendlyFireRadius>
+                <range>40</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>InfernoCannon_Fire</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <onlyManualCast>true</onlyManualCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <muzzleFlashScale>20</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>14</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Auto Cannon -->
+
+    <ThingDef ParentName="FCP_Simple_Gun_Base">
+        <defName>FCP_Gun_Auto_Cannon</defName>
+        <label>Auto Cannon</label>
+        <description>A rotary autocannon firing 20mm high-explosive shells. Originally designed for vehicles, it has been adapted for power armor use. The combination of rapid fire and explosive ammunition makes it devastating against both infantry and light armor. Requires powered assistance to operate due to extreme weight and recoil.</description>
+        <graphicData>
+            <texPath>Weapons/Heavy_Weapons/FCP_Auto_Cannon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <smeltable>false</smeltable>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>1400</MarketValue>
+            <Mass>18.0</Mass>
+            <AccuracyTouch>0.40</AccuracyTouch>
+            <AccuracyShort>0.45</AccuracyShort>
+            <AccuracyMedium>0.55</AccuracyMedium>
+            <AccuracyLong>0.60</AccuracyLong>
+            <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Auto_Cannon</li>
+            <li>FCP_Power_Armor_Required</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>FCP_Bullet_Autocannon</defaultProjectile>
+                <warmupTime>3.0</warmupTime>
+                <range>42</range>
+                <burstShotCount>6</burstShotCount>
+                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+                <soundCast>FCP_Sound_Shot_LMG</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>20</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>16</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="FCP.Core.WeaponRequirementExtension">
+                <requirements>
+                    <li Class="FCP.Core.WeaponRequirement_AnyInner">
+                        <requirements>
+                            <li Class="FCP.Core.WeaponRequirement_AnyApparel">
+                                <requiredApparel>
+                                    <li MayRequire="Rick.FCP.PowerArmor">FCP_Apparel_Power_Armor_Frame</li>
+                                </requiredApparel>
+                            </li>
+                        </requirements>
+                    </li>
+                </requirements>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

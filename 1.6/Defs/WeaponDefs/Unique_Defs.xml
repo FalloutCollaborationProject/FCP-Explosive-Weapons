@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Explosive Weapons __________-->
+
+    <!--_____ Unique Weapons _____-->
+
+    <!-- Red Glare -->
+
+    <ThingDef ParentName="BaseGun">
+        <defName>FCP_Gun_Red_Glare</defName>
+        <useHitPoints>false</useHitPoints>
+        <label>Red Glare</label>
+        <description>A rare experimental missile launcher from the Divide. It features an advanced rapid-feed mechanism that allows it to fire missiles in quick succession. One of the most valuable weapons to survive the war.</description>
+        <graphicData>
+            <texPath>Weapons/Unique/FCP_Red_Glare</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <smeltable>false</smeltable>
+        <statBases>
+            <MarketValue>1650</MarketValue>
+            <Mass>9.0</Mass>
+            <AccuracyTouch>0.55</AccuracyTouch>
+            <AccuracyShort>0.65</AccuracyShort>
+            <AccuracyMedium>0.75</AccuracyMedium>
+            <AccuracyLong>0.80</AccuracyLong>
+            <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+            <DeteriorationRate>0</DeteriorationRate>
+            <Flammability>0</Flammability>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Red_Glare</li>
+            <li>FCP_Heavy_Weapon</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_Rocket</defaultProjectile>
+                <forcedMissRadius>0.8</forcedMissRadius>
+                <warmupTime>2.8</warmupTime>
+                <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+                <range>40</range>
+                <burstShotCount>4</burstShotCount>
+                <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                <soundCast>InfernoCannon_Fire</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <muzzleFlashScale>16</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="FCP.Core.UniqueThingExtension" />
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Broadsider -->
+
+    <ThingDef ParentName="BaseGun">
+        <defName>FCP_Gun_Broadsider</defName>
+        <useHitPoints>false</useHitPoints>
+        <label>Broadsider</label>
+        <description>A naval cannon salvaged from the USS Constitution and modified for portable use. Fires cannonballs fitted with explosive charges. Extremely heavy and unwieldy, but delivers tremendous destructive power. Few have the strength or willingness to carry such an impractical weapon into combat.</description>
+        <graphicData>
+            <texPath>Weapons/Unique/FCP_Broadsider</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <smeltable>false</smeltable>
+        <statBases>
+            <MarketValue>1850</MarketValue>
+            <Mass>16.0</Mass>
+            <AccuracyTouch>0.45</AccuracyTouch>
+            <AccuracyShort>0.55</AccuracyShort>
+            <AccuracyMedium>0.70</AccuracyMedium>
+            <AccuracyLong>0.75</AccuracyLong>
+            <RangedWeapon_Cooldown>5.5</RangedWeapon_Cooldown>
+            <DeteriorationRate>0</DeteriorationRate>
+            <Flammability>0</Flammability>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Broadsider</li>
+            <li>FCP_Heavy_Weapon</li>
+            <li>FCP_Power_Armor_Required</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_Rocket</defaultProjectile>
+                <forcedMissRadius>0.5</forcedMissRadius>
+                <warmupTime>4.0</warmupTime>
+                <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+                <range>44</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>InfernoCannon_Fire</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <muzzleFlashScale>22</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>18</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="FCP.Core.WeaponRequirementExtension">
+                <requirements>
+                    <li Class="FCP.Core.WeaponRequirement_AnyInner">
+                        <requirements>
+                            <li Class="FCP.Core.WeaponRequirement_AnyApparel">
+                                <requiredApparel>
+                                    <li MayRequire="Rick.FCP.PowerArmor">FCP_Apparel_Power_Armor_Frame</li>
+                                </requiredApparel>
+                            </li>
+                        </requirements>
+                    </li>
+                </requirements>
+            </li>
+            <li Class="FCP.Core.UniqueThingExtension" />
+        </modExtensions>
+    </ThingDef>
+
+</Defs>
