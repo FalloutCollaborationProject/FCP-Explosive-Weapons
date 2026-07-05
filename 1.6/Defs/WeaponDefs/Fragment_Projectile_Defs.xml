@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Fragment Projectiles __________-->
+
+    <!-- Base Fragment -->
+
+    <ThingDef Name="FCP_BaseFragment" ParentName="BaseBullet" Abstract="True">
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>RangedStab</damageDef>
+            <speed>45</speed>
+        </projectile>
+    </ThingDef>
+
+    <!-- Steel Fragment -->
+
+    <ThingDef ParentName="FCP_BaseFragment">
+        <defName>FCP_Bullet_Fragment_Steel</defName>
+        <label>steel shrapnel</label>
+        <projectile>
+            <damageAmountBase>10</damageAmountBase>
+            <stoppingPower>0.5</stoppingPower>
+            <armorPenetrationBase>0.15</armorPenetrationBase>
+        </projectile>
+    </ThingDef>
+
+    <!-- Scrap Fragment -->
+
+    <ThingDef ParentName="FCP_BaseFragment">
+        <defName>FCP_Bullet_Fragment_Scrap</defName>
+        <label>scrap shrapnel</label>
+        <projectile>
+            <damageAmountBase>7</damageAmountBase>
+            <stoppingPower>0.3</stoppingPower>
+            <armorPenetrationBase>0.08</armorPenetrationBase>
+        </projectile>
+    </ThingDef>
+
+    <!-- Coin Fragment -->
+
+    <ThingDef ParentName="FCP_BaseFragment">
+        <defName>FCP_Bullet_Fragment_Coin</defName>
+        <label>coin shrapnel</label>
+        <projectile>
+            <damageAmountBase>6</damageAmountBase>
+            <stoppingPower>0.4</stoppingPower>
+            <armorPenetrationBase>0.10</armorPenetrationBase>
+        </projectile>
+    </ThingDef>
+
+    <!-- Pipe Fragment -->
+
+    <ThingDef ParentName="FCP_BaseFragment">
+        <defName>FCP_Bullet_Fragment_Pipe</defName>
+        <label>pipe shrapnel</label>
+        <projectile>
+            <damageAmountBase>8</damageAmountBase>
+            <stoppingPower>0.4</stoppingPower>
+            <armorPenetrationBase>0.12</armorPenetrationBase>
+        </projectile>
+    </ThingDef>
+
+    <!-- Nail Fragment -->
+
+    <ThingDef ParentName="FCP_BaseFragment">
+        <defName>FCP_Bullet_Fragment_Nail</defName>
+        <label>nail shrapnel</label>
+        <projectile>
+            <damageAmountBase>9</damageAmountBase>
+            <stoppingPower>0.2</stoppingPower>
+            <armorPenetrationBase>0.20</armorPenetrationBase>
+        </projectile>
+    </ThingDef>
+
+</Defs>

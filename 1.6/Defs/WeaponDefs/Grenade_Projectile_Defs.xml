@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Grenade Projectiles __________-->
+
+    <!-- Base Grenade Projectile -->
+
+    <ThingDef Name="FCP_BaseGrenadeProjectile" Abstract="True">
+        <category>Projectile</category>
+        <altitudeLayer>Projectile</altitudeLayer>
+        <thingClass>Projectile_Explosive</thingClass>
+        <label>projectile</label>
+        <tickerType>Normal</tickerType>
+        <useHitPoints>False</useHitPoints>
+        <neverMultiSelect>True</neverMultiSelect>
+        <graphicData>
+            <shaderType>Transparent</shaderType>
+        </graphicData>
+        <projectile>
+            <speed>12</speed>
+            <arcHeightFactor>2</arcHeightFactor>
+            <shadowSize>0.4</shadowSize>
+        </projectile>
+    </ThingDef>
+
+    <!--_____ Pre-War Grenade Projectiles _____-->
+
+    <!-- Fragmentation Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Fragmentation</defName>
+        <label>fragmentation grenade</label>
+        <thingClass>FCP.Core.Projectile_FragExplosion</thingClass>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Fragmentation_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>2.0</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>50</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+            <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>Explosion_Bomb</soundExplode>
+        </projectile>
+        <modExtensions>
+            <li Class="FCP.Core.ProjectileExtension_Fragmentation">
+                <projCount>12</projCount>
+                <radius>3~6</radius>
+                <projectileDef>FCP_Bullet_Fragment_Steel</projectileDef>
+                <isCone>false</isCone>
+                <isExplodePreemptively>false</isExplodePreemptively>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Plasma Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Plasma</defName>
+        <label>plasma grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Plasma_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>2.2</explosionRadius>
+            <damageDef>FCP_Damage_Plasma_Burn</damageDef>
+            <damageAmountBase>75</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+            <soundExplode>FCP_Explosion_Plasma</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Pulse Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Pulse</defName>
+        <label>pulse grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Pulse_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>4.0</explosionRadius>
+            <damageDef>EMP</damageDef>
+            <explosionDelay>100</explosionDelay>
+            <soundExplode>Explosion_EMP</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Cryo Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Cryo</defName>
+        <label>cryo grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Cryo_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>2.2</explosionRadius>
+            <damageDef>FCP_Cryo</damageDef>
+            <damageAmountBase>35</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <postExplosionGasType>BlindSmoke</postExplosionGasType>
+            <soundExplode>Explosion_Smoke</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Nuka Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Nuka</defName>
+        <label>nuka grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Nuka_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>3.0</explosionRadius>
+            <damageDef>FCP_Nuka_Explosion</damageDef>
+            <damageAmountBase>85</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>Explosion_Bomb</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Nuka Quantum Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Nuka_Quantum</defName>
+        <label>nuka quantum grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Nuka_Quantum_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>3.5</explosionRadius>
+            <damageDef>FCP_Nuka_Quantum_Explosion</damageDef>
+            <damageAmountBase>110</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>Explosion_Bomb</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Dynamite Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Dynamite</defName>
+        <label>dynamite</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Dynomite_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>2.0</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>45</damageAmountBase>
+            <explosionDelay>60</explosionDelay>
+            <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>Explosion_Bomb</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Long Fuse Dynamite Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Long_Fuse_Dynamite</defName>
+        <label>long fuse dynamite</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Long_Fuse_Dynomite_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>2.0</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>45</damageAmountBase>
+            <explosionDelay>180</explosionDelay>
+            <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>Explosion_Bomb</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Bio Gas Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Bio_Gas</defName>
+        <label>bio gas grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Bio_Gas_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>2.8</explosionRadius>
+            <damageDef>FCP_Bio_Gas</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <postExplosionGasType>ToxGas</postExplosionGasType>
+            <soundExplode>Explosion_Smoke</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Hallucinogen Gas Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Hallucinogen_Gas</defName>
+        <label>hallucinogen gas grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Hallucinogen_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>2.8</explosionRadius>
+            <damageDef>FCP_Hallucinogen_Gas</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <postExplosionGasType>BlindSmoke</postExplosionGasType>
+            <soundExplode>Explosion_Smoke</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Smoke Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Smoke</defName>
+        <label>smoke grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Smoke_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>2.8</explosionRadius>
+            <damageDef>Smoke</damageDef>
+            <explosionDelay>100</explosionDelay>
+            <postExplosionGasType>BlindSmoke</postExplosionGasType>
+            <soundExplode>Explosion_Smoke</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Flashbang Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Flashbang</defName>
+        <label>flashbang grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Flashbang_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>2.5</explosionRadius>
+            <damageDef>FCP_Flashbang</damageDef>
+            <damageAmountBase>5</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <soundExplode>Explosion_Stun</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Acid Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Acid</defName>
+        <label>acid grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Acid_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>2.2</explosionRadius>
+            <damageDef>AcidBurn</damageDef>
+            <damageAmountBase>40</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <preExplosionSpawnThingDef>Filth_SpentAcid</preExplosionSpawnThingDef>
+            <preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+        </projectile>
+    </ThingDef>
+
+    <!--_____ Wasteland Grenade Projectiles _____-->
+
+    <!-- Tincan Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Tincan</defName>
+        <label>tincan grenade</label>
+        <thingClass>FCP.Core.Projectile_FragExplosion</thingClass>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Tincan_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>1.6</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>30</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+            <explosionEffect>GiantExplosion</explosionEffect>
+        </projectile>
+        <modExtensions>
+            <li Class="FCP.Core.ProjectileExtension_Fragmentation">
+                <projCount>8</projCount>
+                <radius>2~5</radius>
+                <projectileDef>FCP_Bullet_Fragment_Scrap</projectileDef>
+                <isCone>false</isCone>
+                <isExplodePreemptively>false</isExplodePreemptively>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Piggybank Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Piggybank</defName>
+        <label>piggybank grenade</label>
+        <thingClass>FCP.Core.Projectile_FragExplosion</thingClass>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Piggybank_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>1.8</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>35</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+            <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>FCP_Explosion_PiggyBank</soundExplode>
+            <postExplosionSpawnThingDef>FCP_Currency_Caps</postExplosionSpawnThingDef>
+            <postExplosionSpawnChance>0.5</postExplosionSpawnChance>
+            <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+        </projectile>
+        <modExtensions>
+            <li Class="FCP.Core.ProjectileExtension_Fragmentation">
+                <projCount>15</projCount>
+                <radius>2~5</radius>
+                <projectileDef>FCP_Bullet_Fragment_Coin</projectileDef>
+                <isCone>false</isCone>
+                <isExplodePreemptively>false</isExplodePreemptively>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Pipebomb Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Pipebomb</defName>
+        <label>pipebomb</label>
+        <thingClass>FCP.Core.Projectile_FragExplosion</thingClass>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Pipebomb_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>1.9</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>38</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+            <explosionEffect>GiantExplosion</explosionEffect>
+        </projectile>
+        <modExtensions>
+            <li Class="FCP.Core.ProjectileExtension_Fragmentation">
+                <projCount>10</projCount>
+                <radius>2~6</radius>
+                <projectileDef>FCP_Bullet_Fragment_Pipe</projectileDef>
+                <isCone>false</isCone>
+                <isExplodePreemptively>false</isExplodePreemptively>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Baseball Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Baseball</defName>
+        <label>baseball grenade</label>
+        <thingClass>FCP.Core.Projectile_FragExplosion</thingClass>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Baseball_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <speed>16</speed>
+            <explosionRadius>1.5</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>28</damageAmountBase>
+            <explosionDelay>80</explosionDelay>
+            <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+            <explosionEffect>GiantExplosion</explosionEffect>
+        </projectile>
+        <modExtensions>
+            <li Class="FCP.Core.ProjectileExtension_Fragmentation">
+                <projCount>18</projCount>
+                <radius>2~5</radius>
+                <projectileDef>FCP_Bullet_Fragment_Nail</projectileDef>
+                <isCone>false</isCone>
+                <isExplodePreemptively>false</isExplodePreemptively>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- MFC Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_MFC</defName>
+        <label>MFC grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_MFC_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>1.9</explosionRadius>
+            <damageDef>FCP_MFC_Explosion</damageDef>
+            <damageAmountBase>42</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+            <soundExplode>Explosion_Bomb</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!-- Molotov Cocktail Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Molotov_Cocktail</defName>
+        <label>molotov cocktail</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Molotov_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>1.8</explosionRadius>
+            <damageDef>Flame</damageDef>
+            <damageAmountBase>25</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+            <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>Explosion_Bomb</soundExplode>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+            <screenShakeFactor>0.5</screenShakeFactor>
+        </projectile>
+    </ThingDef>
+
+    <!-- Mininuke Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Mininuke</defName>
+        <label>mininuke</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Mininuke_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <speed>8</speed>
+            <explosionRadius>8.5</explosionRadius>
+            <damageDef>FCP_Mininuke_Explosion</damageDef>
+            <damageAmountBase>250</damageAmountBase>
+            <explosionDelay>120</explosionDelay>
+            <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>Explosion_Bomb</soundExplode>
+            <screenShakeFactor>5.0</screenShakeFactor>
+        </projectile>
+    </ThingDef>
+
+    <!-- Boombug Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Boombug</defName>
+        <label>boombug grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Boom_Bug_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>2.3</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>48</damageAmountBase>
+            <explosionDelay>100</explosionDelay>
+            <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>Explosion_Bomb</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <!--_____ Unique Grenade Projectiles _____-->
+
+    <!-- Holy Hand Grenade Projectile -->
+
+    <ThingDef ParentName="FCP_BaseGrenadeProjectile">
+        <defName>FCP_Proj_Grenade_Holy_Hand_Grenade</defName>
+        <label>Holy Hand Grenade</label>
+        <graphicData>
+            <texPath>Explosive_Projectiles/FCP_Holy_Hand_Grenade_Projectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <speed>14</speed>
+            <explosionRadius>75.0</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>999</damageAmountBase>
+            <explosionDelay>180</explosionDelay>
+            <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>Explosion_Bomb</soundExplode>
+            <screenShakeFactor>50.0</screenShakeFactor>
+        </projectile>
+    </ThingDef>
+
+</Defs>

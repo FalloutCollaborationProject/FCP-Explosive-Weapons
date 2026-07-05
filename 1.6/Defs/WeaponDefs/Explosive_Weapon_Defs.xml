@@ -11,7 +11,7 @@
         <description>A single-shot grenade launcher chambered for 25mm grenades. Lighter and more portable than most explosive weapons, making it popular among wastelanders who need indirect fire capability without the bulk of heavier launchers.</description>
         <smeltable>false</smeltable>
         <graphicData>
-            <texPath>Weapons/Explosive/FCP_25MM_Grenade_Launcher</texPath>
+            <texPath>Explosive/FCP_25MM_Grenade_Launcher</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
@@ -35,13 +35,13 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_GrenadeFrag</defaultProjectile>
+                <defaultProjectile>FCP_Proj_Grenade_Fragmentation</defaultProjectile>
                 <forcedMissRadius>0.9</forcedMissRadius>
                 <warmupTime>1.8</warmupTime>
                 <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
                 <range>28</range>
                 <burstShotCount>1</burstShotCount>
-                <soundCast>GrenadeGun_Shot</soundCast>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>10</muzzleFlashScale>
             </li>
@@ -71,7 +71,7 @@
         <description>A belt-fed automatic grenade launcher firing 40mm grenades in rapid succession. Originally designed for vehicle mounting, it was adapted for power armor infantry use. The high rate of fire allows it to saturate an area with explosives, making it effective for area denial and defensive operations.</description>
         <smeltable>false</smeltable>
         <graphicData>
-            <texPath>Weapons/Explosive/FCP_Grenade_Machinegun</texPath>
+            <texPath>Explosive/FCP_Grenade_Machinegun</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
@@ -96,14 +96,14 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_GrenadeFrag</defaultProjectile>
+                <defaultProjectile>FCP_Proj_Grenade_Fragmentation</defaultProjectile>
                 <forcedMissRadius>1.5</forcedMissRadius>
                 <warmupTime>2.8</warmupTime>
                 <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
                 <range>30</range>
                 <burstShotCount>8</burstShotCount>
                 <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-                <soundCast>GrenadeGun_Shot</soundCast>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>15</muzzleFlashScale>
             </li>
@@ -156,7 +156,7 @@
         <description>A pre-war shoulder-fired missile launcher. Fires fin-stabilized high-explosive missiles effective against armored targets and structures. Simple, reliable, and still highly valued in the wasteland despite the scarcity of ammunition.</description>
         <smeltable>false</smeltable>
         <graphicData>
-            <texPath>Weapons/Explosive/FCP_Missile_Launcher</texPath>
+            <texPath>Explosive/FCP_Missile_Launcher</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
@@ -219,7 +219,7 @@
         <description>The Rockwell Big Bazooka features a unique triple-barrel design that fires rockets in rapid succession. Heavy and difficult to aim, but the concentrated firepower can overwhelm targets quickly. Requires considerable strength to carry and operate.</description>
         <smeltable>false</smeltable>
         <graphicData>
-            <texPath>Weapons/Explosive/FCP_Rockwell_Big_Bazooka</texPath>
+            <texPath>Explosive/FCP_Rockwell_Big_Bazooka</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
@@ -283,7 +283,7 @@
         <description>The M42 Fat Man is a portable nuclear catapult that launches miniature atomic warheads. Originally issued to power armor units during the war, it remains one of the most destructive man-portable weapons ever created. Extreme caution advised when operating near friendly forces.</description>
         <smeltable>false</smeltable>
         <graphicData>
-            <texPath>Weapons/Explosive/FCP_Fatman</texPath>
+            <texPath>Explosive/FCP_Fatman</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
@@ -346,7 +346,7 @@
         <label>Auto Cannon</label>
         <description>A rotary autocannon firing 20mm high-explosive shells. Originally designed for vehicles, it has been adapted for power armor use. The combination of rapid fire and explosive ammunition makes it devastating against both infantry and light armor. Requires powered assistance to operate due to extreme weight and recoil.</description>
         <graphicData>
-            <texPath>Weapons/Heavy_Weapons/FCP_Auto_Cannon</texPath>
+            <texPath>Explosive/FCP_Auto_Cannon</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>

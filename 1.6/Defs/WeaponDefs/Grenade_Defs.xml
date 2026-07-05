@@ -1,0 +1,1470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Explosive Weapons __________-->
+
+    <!--_____ Pre-War Grenades _____-->
+
+    <!-- Fragmentation Grenade -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Fragmentation</defName>
+        <label>fragmentation grenades</label>
+        <description>A pre-war military fragmentation grenade. The steel casing shatters into deadly shrapnel upon detonation, sending metal fragments in all directions. Standard issue before the war and still highly valued.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Fragmentation_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>120</MarketValue>
+            <Mass>0.5</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw frag grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Fragmentation</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.66</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Plasma Grenade -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Plasma</defName>
+        <label>plasma grenades</label>
+        <description>An advanced pre-war grenade that releases superheated plasma in a contained sphere. The intense heat vaporizes organic tissue and melts armor. Expensive and rare, but devastatingly effective.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Plasma_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>250</MarketValue>
+            <Mass>0.4</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw plasma grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Plasma</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.66</explosiveRadius>
+                <explosiveDamageType>Flame</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Pulse Grenade -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Pulse</defName>
+        <label>pulse grenades</label>
+        <description>A specialized military EMP grenade designed to disable electronic systems and robotics. More powerful than standard EMP grenades, pulse grenades were issued to units expected to face heavy mechanized opposition.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Pulse_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>180</MarketValue>
+            <Mass>0.6</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeEMP</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw pulse grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Pulse</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>4.5</explosiveRadius>
+                <explosiveDamageType>EMP</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Cryo Grenade -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Cryo</defName>
+        <label>cryo grenades</label>
+        <description>An experimental pre-war grenade that releases ultra-cold cryogenic compounds. The sudden temperature drop flash-freezes everything in the blast radius, causing severe frostbite and making materials brittle.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Cryo_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>200</MarketValue>
+            <Mass>0.7</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw cryo grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Cryo</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.66</explosiveRadius>
+                <explosiveDamageType>Frostbite</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Nuka Grenade -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Nuka</defName>
+        <label>nuka grenades</label>
+        <description>An improvised explosive made from Nuka-Cola Quantum bottles. The isotope's natural radioactivity makes it far more destructive than conventional explosives. The distinctive glow gives away its presence, but anyone close enough to see it is already in danger.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Nuka_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>300</MarketValue>
+            <Mass>0.8</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw nuka grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Nuka</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>3.5</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Nuka Quantum Grenade -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Nuka_Quantum</defName>
+        <label>nuka quantum grenades</label>
+        <description>An enhanced version of the nuka grenade using the rarer Nuka-Cola Quantum variant. The higher isotope concentration creates an even more powerful explosion with additional radiation effects. The blue glow is hypnotic—and lethal.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Nuka_Quantum_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>450</MarketValue>
+            <Mass>0.8</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw nuka quantum grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Nuka_Quantum</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>4.2</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Dynamite -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Dynamite</defName>
+        <label>dynamite</label>
+        <description>Pre-war industrial explosive sticks. Originally used for mining and construction, dynamite is still effective for demolition and combat. Burns fast with a short fuse, leaving little time to escape.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Dynomite</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>95</MarketValue>
+            <Mass>0.6</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw dynamite</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Dynamite</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.5</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Long Fuse Dynamite -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Long_Fuse_Dynamite</defName>
+        <label>long fuse dynamite</label>
+        <description>Dynamite sticks with an extended fuse, allowing more time to take cover or set traps. Popular with wasteland trappers and guerrilla fighters who need time to get clear of the blast.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Long_Fuse_Dynomite</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>100</MarketValue>
+            <Mass>0.7</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw long fuse dynamite</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Long_Fuse_Dynamite</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.5</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Bio Gas Grenade -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Bio_Gas</defName>
+        <label>bio gas grenades</label>
+        <description>A chemical weapon from before the war, designed to release toxic biological agents. The gas attacks the respiratory system and exposed skin, causing severe damage to organic targets while leaving structures intact.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Bio_Gas_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>180</MarketValue>
+            <Mass>0.5</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw bio gas grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Bio_Gas</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>3.2</explosiveRadius>
+                <explosiveDamageType>ToxGas</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Hallucinogen Gas Grenade -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Hallucinogen_Gas</defName>
+        <label>HalluciGen gas grenades</label>
+        <description>A canister of weaponized hallucinogenic gas from HalluciGen, Inc. When deployed, it releases a concentrated cloud of psychoactive compounds that cause severe hallucinations and violent paranoia. Victims often turn on each other in their confusion. A pre-war crowd control weapon with terrifying effectiveness.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Hallucinogen_Gas_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>160</MarketValue>
+            <Mass>0.5</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <verbs>
+            <li>
+                <label>throw hallucinogen grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Hallucinogen_Gas</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>3.2</explosiveRadius>
+                <explosiveDamageType>Smoke</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Smoke Grenade -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Smoke</defName>
+        <label>smoke grenades</label>
+        <description>A tactical smoke grenade used to obscure vision and provide cover. Produces a dense cloud of white smoke that blocks line of sight. Essential for military operations and tactical withdrawals.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Smoke_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>60</MarketValue>
+            <Mass>0.4</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw smoke grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Smoke</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>3.2</explosiveRadius>
+                <explosiveDamageType>Smoke</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Flashbang Grenade -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Flashbang</defName>
+        <label>flashbang grenades</label>
+        <description>A non-lethal stun grenade that produces an intense flash of light and deafening sound. Temporarily blinds and disorients anyone nearby. Popular with law enforcement and special operations teams before the war.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Flasbang_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>80</MarketValue>
+            <Mass>0.3</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw flashbang grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Flashbang</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>3.0</explosiveRadius>
+                <explosiveDamageType>Stun</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Acid Grenade -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Acid</defName>
+        <label>acid grenades</label>
+        <description>A chemical grenade that disperses highly corrosive acid upon detonation. The acid eats through armor, flesh, and structural materials indiscriminately. Handle with extreme caution.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Acid_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>140</MarketValue>
+            <Mass>0.6</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw acid grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Acid</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.66</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--_____ Wasteland Grenades _____-->
+
+    <!-- Tincan Grenade -->
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>FCP_Grenade_Tincan</defName>
+        <label>tincan grenades</label>
+        <description>A crude explosive fashioned from a tin can, gunpowder, and scrap metal. When detonated, the can shatters into jagged shrapnel. Cheap and effective, though unreliable. A staple among wasteland raiders and desperate settlers.</description>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>3</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>Machining</researchPrerequisite>
+        </recipeMaker>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Tincan_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>45</MarketValue>
+            <Mass>0.6</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>8000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>15</Steel>
+            <Chemfuel>40</Chemfuel>
+        </costList>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw tincan grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Tincan</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.1</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Piggybank Grenade -->
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>FCP_Grenade_Piggybank</defName>
+        <label>piggybank grenades</label>
+        <description>An improvised grenade made from a ceramic piggybank filled with explosives and pre-war coins. The coins become deadly projectiles when the device detonates. Wasteland ingenuity at its finest—making currency literally pay for its weight in blood.</description>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>Machining</researchPrerequisite>
+        </recipeMaker>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Piggybank_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>60</MarketValue>
+            <Mass>0.8</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>10000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>20</Steel>
+            <Chemfuel>50</Chemfuel>
+            <FCP_Currency_Caps>25</FCP_Currency_Caps>
+        </costList>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw piggybank grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Piggybank</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.3</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Pipebomb Grenade -->
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>FCP_Grenade_Pipebomb</defName>
+        <label>pipebombs</label>
+        <description>A simple explosive device constructed from a sealed pipe filled with gunpowder or other propellants. The metal casing becomes deadly shrapnel. Easy to manufacture and devastatingly effective. A favorite among wasteland insurgents.</description>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>Machining</researchPrerequisite>
+        </recipeMaker>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Pipebomb_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>65</MarketValue>
+            <Mass>0.7</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>9000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>18</Steel>
+            <Chemfuel>60</Chemfuel>
+        </costList>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw pipebomb</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Pipebomb</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.4</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Baseball Grenade -->
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>FCP_Grenade_Baseball</defName>
+        <label>baseball grenades</label>
+        <description>A pre-war baseball gutted and packed with explosives and nails. Throws like the real thing, but explodes on impact. Popular with wasteland gangs for its ease of use and the ironic nostalgia of weaponizing America's pastime.</description>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>3</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>Machining</researchPrerequisite>
+        </recipeMaker>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Baseball_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>50</MarketValue>
+            <Mass>0.4</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>7000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>12</Steel>
+            <Chemfuel>35</Chemfuel>
+        </costList>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw baseball grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>13.5</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.2</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Baseball</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.0</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- MFC  Grenade -->
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>FCP_Grenade_MFC</defName>
+        <label>MFC grenades</label>
+        <description>A repurposed microfusion cell rigged to overload and detonate. When the containment fails, it releases a burst of plasma energy. Dangerous to construct, but effective. Wastelanders with technical know-how can turn depleted energy cells into deadly weapons.</description>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+        </recipeMaker>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_MFC_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>85</MarketValue>
+            <Mass>0.3</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>15000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>10</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw MFC grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_MFC</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.4</explosiveRadius>
+                <explosiveDamageType>Flame</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Molotov Cocktail -->
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>FCP_Grenade_Molotov_Cocktail</defName>
+        <label>molotov cocktails</label>
+        <description>A glass bottle filled with flammable liquid and a burning cloth wick. Simple, cheap, and terrifyingly effective at spreading fire. The weapon of choice for rioters, revolutionaries, and desperate wastelanders throughout history.</description>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>2</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>Machining</researchPrerequisite>
+        </recipeMaker>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Molotov_Cocktail</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_MolotovCocktail</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>35</MarketValue>
+            <Mass>0.5</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>5000</WorkToMake>
+        </statBases>
+        <costList>
+            <Cloth>10</Cloth>
+            <Chemfuel>50</Chemfuel>
+        </costList>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+            <li>GrenadeFlame</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw molotov</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <soundCast>ThrowMolotovCocktail</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Molotov_Cocktail</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.66</explosiveRadius>
+                <explosiveDamageType>Flame</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Mininuke Grenade -->
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>FCP_Grenade_Mininuke</defName>
+        <label>mininukes</label>
+        <description>A small tactical nuclear explosive, small enough to be thrown by hand but powerful enough to level buildings. Highly radioactive and extraordinarily dangerous. Few wastelanders have the resources or insanity to manufacture these.</description>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>10</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+        </recipeMaker>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Mininuke_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>800</MarketValue>
+            <Mass>2.5</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>50000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>80</Steel>
+            <Plasteel>30</Plasteel>
+            <Uranium>15</Uranium>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw mininuke</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>10.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>2.5</warmupTime>
+                <noiseRadius>20</noiseRadius>
+                <ai_AvoidFriendlyFireRadius>15</ai_AvoidFriendlyFireRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Mininuke</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>8.5</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Boombug Grenade -->
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>FCP_Grenade_Boombug</defName>
+        <label>boombug grenades</label>
+        <description>A container of captured boombugs—mutated insects with volatile explosive sacs. When released, they swarm toward heat sources and detonate on contact. Difficult to control but devastating when used correctly. Handle with extreme caution.</description>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>Machining</researchPrerequisite>
+        </recipeMaker>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Explosive_Throwables/FCP_Boombug_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <MarketValue>15</MarketValue>
+            <Mass>0.4</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>12000</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>8</Steel>
+            <Chemfuel>30</Chemfuel>
+        </costList>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <stackLimit>5</stackLimit>
+        <verbs>
+            <li>
+                <label>throw boombug grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Boombug</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.8</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--_____ Unique Grenades _____-->
+
+    <!-- Holy Hand Grenade -->
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>FCP_Grenade_Holy_Hand_Grenade</defName>
+        <useHitPoints>false</useHitPoints>
+        <label>Holy Hand Grenade of Antioch</label>
+        <description>And Saint Attila raised the hand grenade up on high, saying, "O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy." This sacred relic of the old world possesses devastating power—but can only be used once. Count to three. No more, no less.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Unique/FCP_Holy_Hand_Grenade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <techLevel>Archotech</techLevel>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>1.0</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <DeteriorationRate>0</DeteriorationRate>
+            <Flammability>0</Flammability>
+        </statBases>
+        <weaponTags>
+            <li>FCP_Grenade</li>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+        </weaponClasses>
+        <thingCategories>
+            <li>Grenades</li>
+        </thingCategories>
+        <tradeability>None</tradeability>
+        <smeltable>false</smeltable>
+        <destroyOnDrop>true</destroyOnDrop>
+        <stackLimit>1</stackLimit>
+        <verbs>
+            <li>
+                <label>throw Holy Hand Grenade</label>
+                <verbClass>FCP.Core.Verb_LaunchProjectileConsumable</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <forcedMissRadius>0.1</forcedMissRadius>
+                <warmupTime>3.0</warmupTime>
+                <noiseRadius>200</noiseRadius>
+                <ai_AvoidFriendlyFireRadius>200</ai_AvoidFriendlyFireRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>FCP_Proj_Grenade_Holy_Hand_Grenade</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>75.0</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="FCP.Core.UniqueThingExtension" />
+        </modExtensions>
+    </ThingDef>
+
+</Defs>
+
+

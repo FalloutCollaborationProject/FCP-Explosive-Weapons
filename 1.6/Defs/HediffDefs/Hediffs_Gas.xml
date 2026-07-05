@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Gas Effects __________-->
+
+    <!-- Hallucinogen Gas Effect -->
+
+    <HediffDef>
+        <defName>FCP_Hallucinogen_Gas_Exposure</defName>
+        <label>hallucinogen gas</label>
+        <description>Exposed to hallucinogenic gas. Causes intense hallucinations and mental confusion.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.8, 0.4, 0.8)</defaultLabelColor>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>15000~30000</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <minSeverity>0.1</minSeverity>
+                <label>minor</label>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Berserk</mentalState>
+                        <mtbDays>2</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Wander_Psychotic</mentalState>
+                        <mtbDays>2</mtbDays>
+                    </li>
+                </mentalStateGivers>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>-0.20</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.20</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.5</minSeverity>
+                <label>major</label>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Berserk</mentalState>
+                        <mtbDays>0.5</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Wander_Psychotic</mentalState>
+                        <mtbDays>0.5</mtbDays>
+                    </li>
+                </mentalStateGivers>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.30</offset>
+                    </li>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>-0.40</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.40</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Flashbang Effect -->
+
+    <HediffDef>
+        <defName>FCP_Flashbang_Effect</defName>
+        <label>flashbanged</label>
+        <description>Temporarily blinded and deafened by a flashbang grenade. Vision and hearing are severely impaired.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1, 1, 0.5)</defaultLabelColor>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>2500~5000</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                    <li>
+                        <capacity>Hearing</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.25</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.30</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MeleeHitChance>-15</MeleeHitChance>
+                    <ShootingAccuracyPawn>-0.90</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Cryo Effect -->
+
+    <HediffDef>
+        <defName>FCP_Cryo_Freeze</defName>
+        <label>cryogenic freeze</label>
+        <description>Frozen by cryogenic chemicals. Movement and combat effectiveness severely reduced.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.5, 0.8, 1.0)</defaultLabelColor>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>5000~10000</disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.60</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.50</offset>
+                    </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.20</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MeleeHitChance>-10</MeleeHitChance>
+                    <MeleeDodgeChance>-15</MeleeDodgeChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Bio Gas Effect -->
+
+    <HediffDef>
+        <defName>FCP_Bio_Gas_Exposure</defName>
+        <label>bio-weapon exposure</label>
+        <description>Exposed to biological warfare agents. Causes severe sickness, vomiting, and immune system damage.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.4, 0.8, 0.4)</defaultLabelColor>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>true</isBad>
+        <tendable>true</tendable>
+        <comps>
+            <li Class="HediffCompProperties_Immunizable">
+                <severityPerDayNotImmune>-0.25</severityPerDayNotImmune>
+            </li>
+            <li Class="HediffCompProperties_TendDuration">
+                <baseTendDurationHours>24</baseTendDurationHours>
+                <severityPerDayTended>-0.5</severityPerDayTended>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>initial</label>
+                <vomitMtbDays>0.5</vomitMtbDays>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.5</minSeverity>
+                <label>severe</label>
+                <vomitMtbDays>0.25</vomitMtbDays>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.25</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.30</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.20</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Radiation Exposure -->
+
+    <HediffDef>
+        <defName>FCP_Radiation_Exposure</defName>
+        <label>radiation exposure</label>
+        <description>Exposed to dangerous levels of radiation. Causes nausea, weakness, and long-term health damage.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.8, 1.0, 0.4)</defaultLabelColor>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>true</isBad>
+        <tendable>true</tendable>
+        <comps>
+            <li Class="HediffCompProperties_Immunizable">
+                <severityPerDayNotImmune>-0.15</severityPerDayNotImmune>
+            </li>
+            <li Class="HediffCompProperties_TendDuration">
+                <baseTendDurationHours>48</baseTendDurationHours>
+                <severityPerDayTended>-0.35</severityPerDayTended>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>minor</label>
+                <vomitMtbDays>2</vomitMtbDays>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.05</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.4</minSeverity>
+                <label>moderate</label>
+                <vomitMtbDays>1</vomitMtbDays>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.25</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.75</minSeverity>
+                <label>severe</label>
+                <lifeThreatening>true</lifeThreatening>
+                <vomitMtbDays>0.5</vomitMtbDays>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.30</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.50</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.25</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

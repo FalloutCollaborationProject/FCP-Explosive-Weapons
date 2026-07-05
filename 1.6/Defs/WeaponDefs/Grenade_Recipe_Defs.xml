@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Grenade Recipes __________-->
+
+    <!-- Note: Only wasteland-made grenades are craftable. Pre-war grenades must be found, traded, or obtained through quests. -->
+
+    <!--_____ Simple Wasteland Grenades _____-->
+
+    <!-- Tincan Grenade Recipe -->
+
+    <RecipeDef>
+        <defName>FCP_Make_Grenade_Tincan</defName>
+        <label>make tincan grenades</label>
+        <description>Craft crude tincan grenades from scrap metal and explosives.</description>
+        <jobString>Making tincan grenades.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <workAmount>8000</workAmount>
+        <workSkill>Crafting</workSkill>
+        <recipeUsers>
+            <li>FCP_Production_Simple_Weapons_Workbench</li>
+            <li>TableMachining</li>
+        </recipeUsers>
+        <skillRequirements>
+            <Crafting>3</Crafting>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Grenade_Tincan>1</FCP_Grenade_Tincan>
+        </products>
+        <researchPrerequisite>Machining</researchPrerequisite>
+        <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </RecipeDef>
+
+    <!-- Piggybank Grenade Recipe -->
+
+    <RecipeDef>
+        <defName>FCP_Make_Grenade_Piggybank</defName>
+        <label>make piggybank grenades</label>
+        <description>Craft piggybank grenades from ceramic containers, explosives, and scrap coins.</description>
+        <jobString>Making piggybank grenades.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <workAmount>10000</workAmount>
+        <workSkill>Crafting</workSkill>
+        <recipeUsers>
+            <li>FCP_Production_Simple_Weapons_Workbench</li>
+            <li>TableMachining</li>
+        </recipeUsers>
+        <skillRequirements>
+            <Crafting>4</Crafting>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Grenade_Piggybank>1</FCP_Grenade_Piggybank>
+        </products>
+        <researchPrerequisite>Machining</researchPrerequisite>
+        <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </RecipeDef>
+
+    <!-- Pipebomb Recipe -->
+
+    <RecipeDef>
+        <defName>FCP_Make_Grenade_Pipebomb</defName>
+        <label>make pipebombs</label>
+        <description>Craft pipebombs from metal pipes and explosives.</description>
+        <jobString>Making pipebombs.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <workAmount>9000</workAmount>
+        <workSkill>Crafting</workSkill>
+        <recipeUsers>
+            <li>FCP_Production_Simple_Weapons_Workbench</li>
+            <li>TableMachining</li>
+        </recipeUsers>
+        <skillRequirements>
+            <Crafting>4</Crafting>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>18</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>60</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Grenade_Pipebomb>1</FCP_Grenade_Pipebomb>
+        </products>
+        <researchPrerequisite>Machining</researchPrerequisite>
+        <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </RecipeDef>
+
+    <!-- Baseball Grenade Recipe -->
+
+    <RecipeDef>
+        <defName>FCP_Make_Grenade_Baseball</defName>
+        <label>make baseball grenades</label>
+        <description>Craft baseball grenades from old sports equipment, nails, and explosives.</description>
+        <jobString>Making baseball grenades.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <workAmount>7000</workAmount>
+        <workSkill>Crafting</workSkill>
+        <recipeUsers>
+            <li>FCP_Production_Simple_Weapons_Workbench</li>
+            <li>TableMachining</li>
+        </recipeUsers>
+        <skillRequirements>
+            <Crafting>3</Crafting>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>35</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Grenade_Baseball>1</FCP_Grenade_Baseball>
+        </products>
+        <researchPrerequisite>Machining</researchPrerequisite>
+        <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </RecipeDef>
+
+    <!-- Molotov Cocktail Recipe -->
+
+    <RecipeDef>
+        <defName>FCP_Make_Grenade_Molotov_Cocktail</defName>
+        <label>make molotov cocktails</label>
+        <description>Craft molotov cocktails from bottles, cloth, and flammable liquids.</description>
+        <jobString>Making molotov cocktails.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <workAmount>5000</workAmount>
+        <workSkill>Crafting</workSkill>
+        <recipeUsers>
+            <li>FCP_Production_Simple_Weapons_Workbench</li>
+            <li>TableMachining</li>
+        </recipeUsers>
+        <skillRequirements>
+            <Crafting>2</Crafting>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Cloth</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Grenade_Molotov_Cocktail>1</FCP_Grenade_Molotov_Cocktail>
+        </products>
+        <researchPrerequisite>Machining</researchPrerequisite>
+        <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </RecipeDef>
+
+    <!--_____ Advanced Wasteland Grenades _____-->
+
+    <!-- MFC Grenade Recipe -->
+
+    <RecipeDef>
+        <defName>FCP_Make_Grenade_MFC</defName>
+        <label>make MFC grenades</label>
+        <description>Rig microfusion cells to overload and detonate in a plasma burst.</description>
+        <jobString>Making MFC grenades.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <workAmount>15000</workAmount>
+        <workSkill>Crafting</workSkill>
+        <recipeUsers>
+            <li>FCP_Production_Complex_Weapons_Workbench</li>
+            <li>TableMachining</li>
+        </recipeUsers>
+        <skillRequirements>
+            <Crafting>6</Crafting>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Grenade_MFC>1</FCP_Grenade_MFC>
+        </products>
+        <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+        <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </RecipeDef>
+
+    <!-- Boombug Grenade Recipe -->
+
+    <RecipeDef>
+        <defName>FCP_Make_Grenade_Boombug</defName>
+        <label>make boombug grenades</label>
+        <description>Capture and contain live boombugs in throwable containers. Extremely dangerous to manufacture.</description>
+        <jobString>Making boombug grenades.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <workAmount>12000</workAmount>
+        <workSkill>Crafting</workSkill>
+        <recipeUsers>
+            <li>FCP_Production_Simple_Weapons_Workbench</li>
+            <li>TableMachining</li>
+        </recipeUsers>
+        <skillRequirements>
+            <Crafting>5</Crafting>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>30</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Grenade_Boombug>1</FCP_Grenade_Boombug>
+        </products>
+        <researchPrerequisite>Machining</researchPrerequisite>
+        <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </RecipeDef>
+
+    <!-- Mininuke Recipe -->
+
+    <RecipeDef>
+        <defName>FCP_Make_Grenade_Mininuke</defName>
+        <label>make mininukes</label>
+        <description>Manufacture small tactical nuclear devices. Requires extensive materials and advanced knowledge. Extremely dangerous and expensive.</description>
+        <jobString>Making mininukes.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <workAmount>50000</workAmount>
+        <workSkill>Crafting</workSkill>
+        <recipeUsers>
+            <li>FCP_Production_Complex_Weapons_Workbench</li>
+            <li>TableMachining</li>
+        </recipeUsers>
+        <skillRequirements>
+            <Crafting>10</Crafting>
+        </skillRequirements>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>80</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>30</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Grenade_Mininuke>1</FCP_Grenade_Mininuke>
+        </products>
+        <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+        <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </RecipeDef>
+
+</Defs>

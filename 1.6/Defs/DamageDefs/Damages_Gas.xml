@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Gas Damage Types __________-->
+
+    <!-- Hallucinogen Gas Damage -->
+
+    <DamageDef>
+        <defName>FCP_Hallucinogen_Gas</defName>
+        <label>hallucinogen gas</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0} succumbed to hallucinogenic gas poisoning.</deathMessage>
+        <additionalHediffs>
+            <li>
+                <hediff>FCP_Hallucinogen_Gas_Exposure</hediff>
+                <severityPerDamageDealt>0.10</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <explosionColorEdge>(180, 100, 180)</explosionColorEdge>
+        <explosionColorCenter>(200, 120, 200)</explosionColorCenter>
+    </DamageDef>
+
+    <!-- Flashbang Damage -->
+
+    <DamageDef>
+        <defName>FCP_Flashbang</defName>
+        <label>flashbang</label>
+        <workerClass>DamageWorker_Stun</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} was killed by a flashbang.</deathMessage>
+        <additionalHediffs>
+            <li>
+                <hediff>FCP_Flashbang_Effect</hediff>
+                <severityPerDamageDealt>0.20</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <explosionColorEdge>(255, 255, 200)</explosionColorEdge>
+        <explosionColorCenter>(255, 255, 255)</explosionColorCenter>
+    </DamageDef>
+
+    <!-- Cryo Damage -->
+
+    <DamageDef>
+        <defName>FCP_Cryo</defName>
+        <label>cryogenic freeze</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0} was frozen to death.</deathMessage>
+        <additionalHediffs>
+            <li>
+                <hediff>FCP_Cryo_Freeze</hediff>
+                <severityPerDamageDealt>0.025</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <explosionHeatEnergyPerCell>-50</explosionHeatEnergyPerCell>
+        <explosionColorEdge>(100, 180, 255)</explosionColorEdge>
+        <explosionColorCenter>(150, 220, 255)</explosionColorCenter>
+    </DamageDef>
+
+    <!-- Bio Gas Damage -->
+
+    <DamageDef>
+        <defName>FCP_Bio_Gas</defName>
+        <label>bio-weapon gas</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0} died from biological weapon exposure.</deathMessage>
+        <additionalHediffs>
+            <li>
+                <hediff>FCP_Bio_Gas_Exposure</hediff>
+                <severityPerDamageDealt>0.05</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <explosionColorEdge>(100, 200, 100)</explosionColorEdge>
+        <explosionColorCenter>(150, 255, 150)</explosionColorCenter>
+    </DamageDef>
+
+    <DamageDef>
+        <defName>FCP_Rad</defName>
+        <label>radiation</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0} succumbed to radiation poisoning.</deathMessage>
+        <hediff>FCP_Radiation_Exposure</hediff>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Blunt</impactSoundType>
+        <armorCategory>Heat</armorCategory>
+        <minDamageToFragment>0</minDamageToFragment>
+        <defaultDamage>10</defaultDamage>
+        <defaultStoppingPower>0</defaultStoppingPower>
+    </DamageDef>
+
+    <!-- Radiation Gas Damage -->
+
+    <DamageDef>
+        <defName>FCP_Radiation</defName>
+        <label>radiation</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0} succumbed to radiation poisoning.</deathMessage>
+        <additionalHediffs>
+            <li>
+                <hediff>FCP_Radiation_Exposure</hediff>
+                <severityPerDamageDealt>0.05</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+        <explosionColorEdge>(200, 255, 100)</explosionColorEdge>
+        <explosionColorCenter>(255, 255, 150)</explosionColorCenter>
+    </DamageDef>
+
+    <!-- Nuka Cola Explosion -->
+
+    <DamageDef ParentName="Bomb">
+        <defName>FCP_Nuka_Explosion</defName>
+        <label>nuka cola explosion</label>
+        <additionalHediffs>
+            <li>
+                <hediff>FCP_Radiation_Exposure</hediff>
+                <severityPerDamageDealt>0.005</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <explosionColorEdge>(200, 100, 50)</explosionColorEdge>
+        <explosionColorCenter>(255, 150, 100)</explosionColorCenter>
+    </DamageDef>
+
+    <!-- Nuka Quantum Explosion -->
+
+    <DamageDef ParentName="Bomb">
+        <defName>FCP_Nuka_Quantum_Explosion</defName>
+        <label>nuka quantum explosion</label>
+        <additionalHediffs>
+            <li>
+                <hediff>FCP_Radiation_Exposure</hediff>
+                <severityPerDamageDealt>0.008</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <explosionColorEdge>(100, 150, 255)</explosionColorEdge>
+        <explosionColorCenter>(150, 200, 255)</explosionColorCenter>
+    </DamageDef>
+
+    <!-- Mininuke Explosion -->
+
+    <DamageDef ParentName="Bomb">
+        <defName>FCP_Mininuke_Explosion</defName>
+        <label>nuclear explosion</label>
+        <additionalHediffs>
+            <li>
+                <hediff>FCP_Radiation_Exposure</hediff>
+                <severityPerDamageDealt>0.015</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <explosionColorEdge>(255, 200, 50)</explosionColorEdge>
+        <explosionColorCenter>(255, 255, 100)</explosionColorCenter>
+    </DamageDef>
+
+    <!-- MFC Energy Explosion -->
+
+    <DamageDef ParentName="Flame">
+        <defName>FCP_MFC_Explosion</defName>
+        <label>energy cell explosion</label>
+        <deathMessage>{0} was vaporized by an energy explosion.</deathMessage>
+        <explosionHeatEnergyPerCell>80</explosionHeatEnergyPerCell>
+        <explosionSnowMeltAmount>1.0</explosionSnowMeltAmount>
+        <explosionColorEdge>(100, 255, 255)</explosionColorEdge>
+        <explosionColorCenter>(200, 255, 255)</explosionColorCenter>
+    </DamageDef>
+
+</Defs>

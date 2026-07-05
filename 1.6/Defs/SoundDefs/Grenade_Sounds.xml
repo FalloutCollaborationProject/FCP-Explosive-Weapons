@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Sounds __________-->
+
+    <!--_____ Grenades _____-->
+
+    <!-- Plasma Grenade -->
+
+    <SoundDef>
+        <defName>FCP_Explosion_Plasma</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Plasma_Grenade_Explosion</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>80~80</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- Piggy Bank Grenade -->
+
+    <SoundDef>
+        <defName>FCP_Explosion_PiggyBank</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Bottlecap_Explosion</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>60~60</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+</Defs>
