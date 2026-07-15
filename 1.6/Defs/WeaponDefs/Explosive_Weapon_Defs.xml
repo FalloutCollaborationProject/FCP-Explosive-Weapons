@@ -186,7 +186,7 @@
                 <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
                 <range>38</range>
                 <burstShotCount>1</burstShotCount>
-                <soundCast>InfernoCannon_Fire</soundCast>
+                <soundCast>FCP_Sound_Shot_MissileLauncher</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <targetParams>
                     <canTargetLocations>true</canTargetLocations>
@@ -250,7 +250,7 @@
                 <range>35</range>
                 <burstShotCount>2</burstShotCount>
                 <ticksBetweenBurstShots>25</ticksBetweenBurstShots>
-                <soundCast>InfernoCannon_Fire</soundCast>
+                <soundCast>ThumpCannon_Fire</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <targetParams>
                     <canTargetLocations>true</canTargetLocations>
@@ -313,7 +313,7 @@
                 <ai_AvoidFriendlyFireRadius>10</ai_AvoidFriendlyFireRadius>
                 <range>40</range>
                 <burstShotCount>1</burstShotCount>
-                <soundCast>InfernoCannon_Fire</soundCast>
+                <soundCast>FCP_Sound_Shot_Fatman</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <onlyManualCast>true</onlyManualCast>
                 <targetParams>
@@ -376,7 +376,7 @@
                 <range>42</range>
                 <burstShotCount>6</burstShotCount>
                 <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-                <soundCast>FCP_Sound_Shot_LMG</soundCast>
+                <soundCast>Shot_Autocannon</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>20</muzzleFlashScale>
             </li>

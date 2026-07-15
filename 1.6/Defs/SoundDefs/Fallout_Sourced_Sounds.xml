@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Sounds sourced from Fallout 3 / New Vegas __________-->
+
+    <!--_____ Grenade Explosions _____-->
+
+    <!-- Fragmentation Grenade -->
+
+    <SoundDef>
+        <defName>FCP_Explosion_Frag</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Frag_Explosion_01</clipPath>
+                    </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Frag_Explosion_02</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>75~75</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- Fragmentation Grenade (Low, improvised) -->
+
+    <SoundDef>
+        <defName>FCP_Explosion_Frag_Low</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Frag_Low_Explosion_01</clipPath>
+                    </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Frag_Low_Explosion_02</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>65~65</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- EMP / Pulse Grenade -->
+
+    <SoundDef>
+        <defName>FCP_Explosion_EMP</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_EMP_Explosion_01</clipPath>
+                    </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_EMP_Explosion_02</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>70~70</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- Plasma / MFC Grenade (Low) -->
+
+    <SoundDef>
+        <defName>FCP_Explosion_Plasma_Low</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Plasma_Low_Explosion_01</clipPath>
+                    </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Plasma_Low_Explosion_02</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>65~65</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- Molotov Cocktail -->
+
+    <SoundDef>
+        <defName>FCP_Explosion_Molotov</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Molotov_Explosion_01</clipPath>
+                    </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Molotov_Explosion_02</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>70~70</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- Flashbang Grenade -->
+
+    <SoundDef>
+        <defName>FCP_Explosion_Flashbang</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Flashbang_Explosion_01</clipPath>
+                    </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Flashbang_Explosion_02</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>75~75</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- Mininuke -->
+
+    <SoundDef>
+        <defName>FCP_Explosion_Nuke_Small</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Nuke_Small_2D</clipPath>
+                    </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Nuke_Small_3D</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>95~95</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- Holy Hand Grenade -->
+
+    <SoundDef>
+        <defName>FCP_Explosion_Nuke_Big</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Nuke_Big_Explosion</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>100~100</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!--_____ Weapon Fire _____-->
+
+    <!-- Fat Man -->
+
+    <SoundDef>
+        <defName>FCP_Sound_Shot_Fatman</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>10</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Fatman_Fire_2D</clipPath>
+                    </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Fatman_Fire_3D</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>75~75</volumeRange>
+                <pitchRange>0.97~1.03</pitchRange>
+                <distRange>0~60</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- Missile Launcher / Red Glare -->
+
+    <SoundDef>
+        <defName>FCP_Sound_Shot_MissileLauncher</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>10</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Missile_Launcher_Fire_2D</clipPath>
+                    </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Missile_Launcher_Fire_3D</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>75~75</volumeRange>
+                <pitchRange>0.97~1.03</pitchRange>
+                <distRange>0~60</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+</Defs>

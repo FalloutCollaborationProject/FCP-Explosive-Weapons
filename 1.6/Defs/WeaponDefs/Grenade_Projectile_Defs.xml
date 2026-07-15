@@ -42,7 +42,7 @@
             <explosionDelay>100</explosionDelay>
             <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
             <explosionEffect>GiantExplosion</explosionEffect>
-            <soundExplode>Explosion_Bomb</soundExplode>
+            <soundExplode>FCP_Explosion_Frag</soundExplode>
         </projectile>
         <modExtensions>
             <li Class="FCP.Core.ProjectileExtension_Fragmentation">
@@ -87,7 +87,7 @@
             <explosionRadius>4.0</explosionRadius>
             <damageDef>EMP</damageDef>
             <explosionDelay>100</explosionDelay>
-            <soundExplode>Explosion_EMP</soundExplode>
+            <soundExplode>FCP_Explosion_EMP</soundExplode>
         </projectile>
     </ThingDef>
 
@@ -256,7 +256,7 @@
             <damageDef>FCP_Flashbang</damageDef>
             <damageAmountBase>5</damageAmountBase>
             <explosionDelay>100</explosionDelay>
-            <soundExplode>Explosion_Stun</soundExplode>
+            <soundExplode>FCP_Explosion_Flashbang</soundExplode>
         </projectile>
     </ThingDef>
 
@@ -274,6 +274,7 @@
             <damageDef>AcidBurn</damageDef>
             <damageAmountBase>40</damageAmountBase>
             <explosionDelay>100</explosionDelay>
+            <soundExplode>Explosion_Bomb</soundExplode>
             <preExplosionSpawnThingDef>Filth_SpentAcid</preExplosionSpawnThingDef>
             <preExplosionSpawnChance>0.5</preExplosionSpawnChance>
         </projectile>
@@ -298,6 +299,7 @@
             <explosionDelay>100</explosionDelay>
             <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
             <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>FCP_Explosion_Frag_Low</soundExplode>
         </projectile>
         <modExtensions>
             <li Class="FCP.Core.ProjectileExtension_Fragmentation">
@@ -360,6 +362,7 @@
             <explosionDelay>100</explosionDelay>
             <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
             <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>FCP_Explosion_Frag_Low</soundExplode>
         </projectile>
         <modExtensions>
             <li Class="FCP.Core.ProjectileExtension_Fragmentation">
@@ -390,6 +393,7 @@
             <explosionDelay>80</explosionDelay>
             <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
             <explosionEffect>GiantExplosion</explosionEffect>
+            <soundExplode>FCP_Explosion_Frag_Low</soundExplode>
         </projectile>
         <modExtensions>
             <li Class="FCP.Core.ProjectileExtension_Fragmentation">
@@ -417,7 +421,7 @@
             <damageAmountBase>42</damageAmountBase>
             <explosionDelay>100</explosionDelay>
             <ai_IsIncendiary>true</ai_IsIncendiary>
-            <soundExplode>Explosion_Bomb</soundExplode>
+            <soundExplode>FCP_Explosion_Plasma_Low</soundExplode>
         </projectile>
     </ThingDef>
 
@@ -437,7 +441,7 @@
             <explosionDelay>100</explosionDelay>
             <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
             <explosionEffect>GiantExplosion</explosionEffect>
-            <soundExplode>Explosion_Bomb</soundExplode>
+            <soundExplode>FCP_Explosion_Molotov</soundExplode>
             <ai_IsIncendiary>true</ai_IsIncendiary>
             <screenShakeFactor>0.5</screenShakeFactor>
         </projectile>
@@ -459,7 +463,7 @@
             <damageAmountBase>250</damageAmountBase>
             <explosionDelay>120</explosionDelay>
             <explosionEffect>GiantExplosion</explosionEffect>
-            <soundExplode>Explosion_Bomb</soundExplode>
+            <soundExplode>FCP_Explosion_Nuke_Small</soundExplode>
             <screenShakeFactor>5.0</screenShakeFactor>
         </projectile>
     </ThingDef>
@@ -501,7 +505,7 @@
             <damageAmountBase>999</damageAmountBase>
             <explosionDelay>180</explosionDelay>
             <explosionEffect>GiantExplosion</explosionEffect>
-            <soundExplode>Explosion_Bomb</soundExplode>
+            <soundExplode>FCP_Explosion_Nuke_Big</soundExplode>
             <screenShakeFactor>50.0</screenShakeFactor>
         </projectile>
     </ThingDef>

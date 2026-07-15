@@ -44,7 +44,7 @@
                 <range>40</range>
                 <burstShotCount>4</burstShotCount>
                 <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-                <soundCast>InfernoCannon_Fire</soundCast>
+                <soundCast>FCP_Sound_Shot_MissileLauncher</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <targetParams>
                     <canTargetLocations>true</canTargetLocations>

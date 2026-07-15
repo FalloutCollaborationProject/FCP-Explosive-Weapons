@@ -17,6 +17,12 @@
                     <li Class="AudioGrain_Clip">
                         <clipPath>Explosions/FCP_Plasma_Grenade_Explosion</clipPath>
                     </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Plasma_Explosion_Fallout_01</clipPath>
+                    </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Plasma_Explosion_Fallout_02</clipPath>
+                    </li>
                 </grains>
                 <volumeRange>80~80</volumeRange>
                 <pitchRange>0.95~1.05</pitchRange>
@@ -35,6 +41,12 @@
                 <grains>
                     <li Class="AudioGrain_Clip">
                         <clipPath>Explosions/FCP_Bottlecap_Explosion</clipPath>
+                    </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Bottlecap_Explosion_Fallout_01</clipPath>
+                    </li>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Explosions/FCP_Bottlecap_Explosion_Fallout_02</clipPath>
                     </li>
                 </grains>
                 <volumeRange>60~60</volumeRange>
