@@ -303,11 +303,12 @@
             <li>FCP_Fatman</li>
             <li>FCP_Heavy_Weapon</li>
         </weaponTags>
+        <equippedAngleOffset>45</equippedAngleOffset>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_DoomsdayRocket</defaultProjectile>
+                <defaultProjectile>FCP_Bullet_MiniNuke</defaultProjectile>
                 <forcedMissRadius>2.5</forcedMissRadius>
                 <warmupTime>5.0</warmupTime>
                 <ai_AvoidFriendlyFireRadius>10</ai_AvoidFriendlyFireRadius>
@@ -337,6 +338,31 @@
                 <rarity>Rare</rarity>
             </li>
         </comps>
+    </ThingDef>
+
+    <!-- Mini Nuke -->
+
+    <ThingDef>
+        <defName>FCP_Bullet_MiniNuke</defName>
+        <label>mini nuke</label>
+        <category>Projectile</category>
+        <altitudeLayer>Projectile</altitudeLayer>
+        <thingClass>Projectile_DoomsdayRocket</thingClass>
+        <tickerType>Normal</tickerType>
+        <useHitPoints>False</useHitPoints>
+        <neverMultiSelect>True</neverMultiSelect>
+        <graphicData>
+            <texPath>Things/Projectile/Rocket_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>180</damageAmountBase>
+            <armorPenetrationBase>1.0</armorPenetrationBase>
+            <explosionRadius>8.5</explosionRadius>
+            <speed>50</speed>
+        </projectile>
     </ThingDef>
 
     <!-- Auto Cannon -->
