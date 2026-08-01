@@ -9,7 +9,7 @@
 
     <!-- Tincan Grenade Recipe -->
 
-    <RecipeDef>
+    <RecipeDef MayRequire="Rick.FCP.Wastelanders">
         <defName>FCP_Make_Grenade_Tincan</defName>
         <label>make tincan grenades</label>
         <description>Craft crude tincan grenades from scrap metal and explosives.</description>
@@ -48,12 +48,15 @@
             <FCP_Grenade_Tincan>1</FCP_Grenade_Tincan>
         </products>
         <researchPrerequisite>Machining</researchPrerequisite>
+        <researchPrerequisites>
+            <li>FCP_Research_Blueprint_TincanGrenade</li>
+        </researchPrerequisites>
         <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </RecipeDef>
 
     <!-- Piggybank Grenade Recipe -->
 
-    <RecipeDef>
+    <RecipeDef MayRequire="Rick.FCP.Wastelanders">
         <defName>FCP_Make_Grenade_Piggybank</defName>
         <label>make piggybank grenades</label>
         <description>Craft piggybank grenades from ceramic containers, explosives, and scrap coins.</description>
@@ -92,12 +95,15 @@
             <FCP_Grenade_Piggybank>1</FCP_Grenade_Piggybank>
         </products>
         <researchPrerequisite>Machining</researchPrerequisite>
+        <researchPrerequisites>
+            <li>FCP_Research_Blueprint_PiggybankGrenade</li>
+        </researchPrerequisites>
         <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </RecipeDef>
 
     <!-- Pipebomb Recipe -->
 
-    <RecipeDef>
+    <RecipeDef MayRequire="Rick.FCP.Wastelanders">
         <defName>FCP_Make_Grenade_Pipebomb</defName>
         <label>make pipebombs</label>
         <description>Craft pipebombs from metal pipes and explosives.</description>
@@ -136,12 +142,15 @@
             <FCP_Grenade_Pipebomb>1</FCP_Grenade_Pipebomb>
         </products>
         <researchPrerequisite>Machining</researchPrerequisite>
+        <researchPrerequisites>
+            <li>FCP_Research_Blueprint_PipebombGrenade</li>
+        </researchPrerequisites>
         <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </RecipeDef>
 
     <!-- Baseball Grenade Recipe -->
 
-    <RecipeDef>
+    <RecipeDef MayRequire="Rick.FCP.Wastelanders">
         <defName>FCP_Make_Grenade_Baseball</defName>
         <label>make baseball grenades</label>
         <description>Craft baseball grenades from old sports equipment, nails, and explosives.</description>
@@ -180,12 +189,15 @@
             <FCP_Grenade_Baseball>1</FCP_Grenade_Baseball>
         </products>
         <researchPrerequisite>Machining</researchPrerequisite>
+        <researchPrerequisites>
+            <li>FCP_Research_Blueprint_BaseballGrenade</li>
+        </researchPrerequisites>
         <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </RecipeDef>
 
     <!-- Molotov Cocktail Recipe -->
 
-    <RecipeDef>
+    <RecipeDef MayRequire="Rick.FCP.Wastelanders">
         <defName>FCP_Make_Grenade_Molotov_Cocktail</defName>
         <label>make molotov cocktails</label>
         <description>Craft molotov cocktails from bottles, cloth, and flammable liquids.</description>
@@ -224,6 +236,9 @@
             <FCP_Grenade_Molotov_Cocktail>1</FCP_Grenade_Molotov_Cocktail>
         </products>
         <researchPrerequisite>Machining</researchPrerequisite>
+        <researchPrerequisites>
+            <li>FCP_Research_Blueprint_MolotovCocktail</li>
+        </researchPrerequisites>
         <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </RecipeDef>
 
@@ -231,7 +246,7 @@
 
     <!-- MFC Grenade Recipe -->
 
-    <RecipeDef>
+    <RecipeDef MayRequire="Rick.FCP.Wastelanders">
         <defName>FCP_Make_Grenade_MFC</defName>
         <label>make MFC grenades</label>
         <description>Rig microfusion cells to overload and detonate in a plasma burst.</description>
@@ -270,12 +285,15 @@
             <FCP_Grenade_MFC>1</FCP_Grenade_MFC>
         </products>
         <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+        <researchPrerequisites>
+            <li>FCP_Research_Blueprint_MFCGrenade</li>
+        </researchPrerequisites>
         <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </RecipeDef>
 
     <!-- Boombug Grenade Recipe -->
 
-    <RecipeDef>
+    <RecipeDef MayRequire="Rick.FCP.Wastelanders">
         <defName>FCP_Make_Grenade_Boombug</defName>
         <label>make boombug grenades</label>
         <description>Capture and contain live boombugs in throwable containers. Extremely dangerous to manufacture.</description>
@@ -314,12 +332,15 @@
             <FCP_Grenade_Boombug>1</FCP_Grenade_Boombug>
         </products>
         <researchPrerequisite>Machining</researchPrerequisite>
+        <researchPrerequisites>
+            <li>FCP_Research_Blueprint_BoombugGrenade</li>
+        </researchPrerequisites>
         <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </RecipeDef>
 
     <!-- Mininuke Recipe -->
 
-    <RecipeDef>
+    <RecipeDef MayRequire="Rick.FCP.Wastelanders">
         <defName>FCP_Make_Grenade_Mininuke</defName>
         <label>make mininukes</label>
         <description>Manufacture small tactical nuclear devices. Requires extensive materials and advanced knowledge. Extremely dangerous and expensive.</description>
@@ -374,6 +395,9 @@
             <FCP_Grenade_Mininuke>1</FCP_Grenade_Mininuke>
         </products>
         <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+        <researchPrerequisites>
+            <li>FCP_Research_Blueprint_Mininuke</li>
+        </researchPrerequisites>
         <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </RecipeDef>
 

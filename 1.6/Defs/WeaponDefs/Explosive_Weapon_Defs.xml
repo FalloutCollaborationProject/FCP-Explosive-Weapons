@@ -15,11 +15,25 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
+        <recipeMaker MayRequire="Rick.FCP.Wastelanders">
+            <researchPrerequisites>
+                <li>FCP_Research_Advanced_Weapons_Manufacturing</li>
+                <li>FCP_Research_Blueprint_25mmGrenadeLauncher</li>
+            </researchPrerequisites>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>FCP_Production_Complex_Weapons_Workbench</li>
+                <li>TableMachining</li>
+            </recipeUsers>
+        </recipeMaker>
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <statBases>
             <MarketValue>750</MarketValue>
+            <WorkToMake>60000</WorkToMake>
             <Mass>6.5</Mass>
             <AccuracyTouch>0.50</AccuracyTouch>
             <AccuracyShort>0.60</AccuracyShort>
@@ -27,6 +41,11 @@
             <AccuracyLong>0.65</AccuracyLong>
             <RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
         </statBases>
+        <costList>
+            <Steel>90</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <Chemfuel>20</Chemfuel>
+        </costList>
         <weaponTags>
             <li>FCP_25MM_Grenade_Launcher</li>
             <li>FCP_Heavy_Weapon</li>
@@ -75,11 +94,25 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
+        <recipeMaker MayRequire="Rick.FCP.Wastelanders">
+            <researchPrerequisites>
+                <li>FCP_Research_Advanced_Weapons_Manufacturing</li>
+                <li>FCP_Research_Blueprint_GrenadeMachineGun</li>
+            </researchPrerequisites>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>FCP_Production_Complex_Weapons_Workbench</li>
+                <li>TableMachining</li>
+            </recipeUsers>
+        </recipeMaker>
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <statBases>
             <MarketValue>1350</MarketValue>
+            <WorkToMake>60000</WorkToMake>
             <Mass>16.5</Mass>
             <AccuracyTouch>0.30</AccuracyTouch>
             <AccuracyShort>0.40</AccuracyShort>
@@ -87,6 +120,11 @@
             <AccuracyLong>0.50</AccuracyLong>
             <RangedWeapon_Cooldown>3.8</RangedWeapon_Cooldown>
         </statBases>
+        <costList>
+            <Steel>90</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <Chemfuel>20</Chemfuel>
+        </costList>
         <weaponTags>
             <li>FCP_Grenade_Machinegun</li>
             <li>FCP_Heavy_Weapon</li>
@@ -160,11 +198,25 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
+        <recipeMaker MayRequire="Rick.FCP.Wastelanders">
+            <researchPrerequisites>
+                <li>FCP_Research_Advanced_Weapons_Manufacturing</li>
+                <li>FCP_Research_Blueprint_MissileLauncher</li>
+            </researchPrerequisites>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>FCP_Production_Complex_Weapons_Workbench</li>
+                <li>TableMachining</li>
+            </recipeUsers>
+        </recipeMaker>
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <statBases>
             <MarketValue>1100</MarketValue>
+            <WorkToMake>60000</WorkToMake>
             <Mass>10.0</Mass>
             <AccuracyTouch>0.45</AccuracyTouch>
             <AccuracyShort>0.55</AccuracyShort>
@@ -172,6 +224,11 @@
             <AccuracyLong>0.70</AccuracyLong>
             <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
         </statBases>
+        <costList>
+            <Steel>90</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <Chemfuel>20</Chemfuel>
+        </costList>
         <weaponTags>
             <li>FCP_Missile_Launcher</li>
             <li>FCP_Heavy_Weapon</li>
@@ -223,11 +280,25 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
+        <recipeMaker MayRequire="Rick.FCP.Wastelanders">
+            <researchPrerequisites>
+                <li>FCP_Research_Advanced_Weapons_Manufacturing</li>
+                <li>FCP_Research_Blueprint_RockwellBigBazooka</li>
+            </researchPrerequisites>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>FCP_Production_Complex_Weapons_Workbench</li>
+                <li>TableMachining</li>
+            </recipeUsers>
+        </recipeMaker>
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <statBases>
             <MarketValue>1150</MarketValue>
+            <WorkToMake>60000</WorkToMake>
             <Mass>12.0</Mass>
             <AccuracyTouch>0.40</AccuracyTouch>
             <AccuracyShort>0.50</AccuracyShort>
@@ -235,6 +306,11 @@
             <AccuracyLong>0.50</AccuracyLong>
             <RangedWeapon_Cooldown>5.0</RangedWeapon_Cooldown>
         </statBases>
+        <costList>
+            <Steel>90</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <Chemfuel>20</Chemfuel>
+        </costList>
         <weaponTags>
             <li>FCP_Rockwell_Big_Bazooka</li>
             <li>FCP_Heavy_Weapon</li>
@@ -287,11 +363,25 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
+        <recipeMaker MayRequire="Rick.FCP.Wastelanders">
+            <researchPrerequisites>
+                <li>FCP_Research_Advanced_Weapons_Manufacturing</li>
+                <li>FCP_Research_Blueprint_FatMan</li>
+            </researchPrerequisites>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>FCP_Production_Complex_Weapons_Workbench</li>
+                <li>TableMachining</li>
+            </recipeUsers>
+        </recipeMaker>
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <statBases>
             <MarketValue>2200</MarketValue>
+            <WorkToMake>60000</WorkToMake>
             <Mass>14.0</Mass>
             <AccuracyTouch>0.50</AccuracyTouch>
             <AccuracyShort>0.60</AccuracyShort>
@@ -299,6 +389,11 @@
             <AccuracyLong>0.60</AccuracyLong>
             <RangedWeapon_Cooldown>6.0</RangedWeapon_Cooldown>
         </statBases>
+        <costList>
+            <Steel>90</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <Chemfuel>20</Chemfuel>
+        </costList>
         <weaponTags>
             <li>FCP_Fatman</li>
             <li>FCP_Heavy_Weapon</li>
@@ -377,11 +472,25 @@
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
         <smeltable>false</smeltable>
+        <recipeMaker MayRequire="Rick.FCP.Wastelanders">
+            <researchPrerequisites>
+                <li>FCP_Research_Advanced_Weapons_Manufacturing</li>
+                <li>FCP_Research_Blueprint_AutoCannon</li>
+            </researchPrerequisites>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>FCP_Production_Complex_Weapons_Workbench</li>
+                <li>TableMachining</li>
+            </recipeUsers>
+        </recipeMaker>
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <statBases>
             <MarketValue>1400</MarketValue>
+            <WorkToMake>60000</WorkToMake>
             <Mass>18.0</Mass>
             <AccuracyTouch>0.40</AccuracyTouch>
             <AccuracyShort>0.45</AccuracyShort>
@@ -389,6 +498,11 @@
             <AccuracyLong>0.60</AccuracyLong>
             <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
         </statBases>
+        <costList>
+            <Steel>90</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <Chemfuel>20</Chemfuel>
+        </costList>
         <weaponTags>
             <li>FCP_Auto_Cannon</li>
             <li>FCP_Power_Armor_Required</li>
