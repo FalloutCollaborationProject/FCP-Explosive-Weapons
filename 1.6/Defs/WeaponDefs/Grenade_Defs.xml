@@ -1264,6 +1264,7 @@
         <graphicData>
             <texPath>Explosive_Throwables/FCP_Mininuke_Grenade</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
         </graphicData>
         <uiIconScale>1.3</uiIconScale>
         <soundInteract>Interact_Grenade</soundInteract>
@@ -1409,6 +1410,7 @@
         <graphicData>
             <texPath>Unique/FCP_Holy_Hand_Grenade</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.67, 0.67)</drawSize>
         </graphicData>
         <uiIconScale>1.3</uiIconScale>
         <soundInteract>Interact_Grenade</soundInteract>
