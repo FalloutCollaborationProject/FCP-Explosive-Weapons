@@ -16,6 +16,7 @@
             <texPath>Unique/FCP_Red_Glare</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <equippedAngleOffset>45</equippedAngleOffset>
         <soundInteract>Interact_Rifle</soundInteract>
         <smeltable>false</smeltable>
         <statBases>
@@ -83,6 +84,7 @@
             <texPath>Unique/FCP_Broadsider</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <equippedAngleOffset>45</equippedAngleOffset>
         <soundInteract>Interact_Rifle</soundInteract>
         <smeltable>false</smeltable>
         <statBases>

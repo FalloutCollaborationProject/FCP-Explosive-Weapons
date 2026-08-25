@@ -320,7 +320,7 @@
     <ThingDef ParentName="BaseWeapon">
         <defName>FCP_Grenade_Nuka_Quantum</defName>
         <label>nuka quantum grenades</label>
-        <description>An enhanced version of the nuka grenade using the rarer Nuka-Cola Quantum variant. The higher isotope concentration creates an even more powerful explosion with additional radiation effects. The blue glow is hypnotic—and lethal.</description>
+        <description>An enhanced version of the nuka grenade using the rarer Nuka-Cola Quantum variant. The higher isotope concentration creates an even more powerful explosion with additional radiation effects. The blue glow is hypnotic. And lethal.</description>
         <tickerType>Normal</tickerType>
         <graphicData>
             <texPath>Explosive_Throwables/FCP_Nuka_Quantum_Grenade</texPath>
@@ -887,7 +887,7 @@
     <ThingDef ParentName="BaseMakeableGrenade">
         <defName>FCP_Grenade_Piggybank</defName>
         <label>piggybank grenades</label>
-        <description>An improvised grenade made from a ceramic piggybank filled with explosives and pre-war coins. The coins become deadly projectiles when the device detonates. Wasteland ingenuity at its finest—making currency literally pay for its weight in blood.</description>
+        <description>An improvised grenade made from a ceramic piggybank filled with explosives and pre-war coins. The coins become deadly projectiles when the device detonates. Wasteland ingenuity at its finest, turning pocket change into shrapnel.</description>
         <recipeMaker>
             <skillRequirements>
                 <Crafting>4</Crafting>
@@ -1329,7 +1329,7 @@
     <ThingDef ParentName="BaseMakeableGrenade">
         <defName>FCP_Grenade_Boombug</defName>
         <label>boombug grenades</label>
-        <description>A container of captured boombugs—mutated insects with volatile explosive sacs. When released, they swarm toward heat sources and detonate on contact. Difficult to control but devastating when used correctly. Handle with extreme caution.</description>
+        <description>A container of captured boombugs: mutated insects with volatile explosive sacs. When released, they swarm toward heat sources and detonate on contact. Difficult to control but devastating when used correctly. Handle with extreme caution.</description>
         <recipeMaker>
             <skillRequirements>
                 <Crafting>5</Crafting>
@@ -1405,7 +1405,7 @@
         <defName>FCP_Grenade_Holy_Hand_Grenade</defName>
         <useHitPoints>false</useHitPoints>
         <label>Holy Hand Grenade of Antioch</label>
-        <description>And Saint Attila raised the hand grenade up on high, saying, "O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy." This sacred relic of the old world possesses devastating power—but can only be used once. Count to three. No more, no less.</description>
+        <description>And Saint Attila raised the hand grenade up on high, saying, "O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy." This sacred relic of the old world possesses devastating power, but can only be used once. Count to three. No more, no less.</description>
         <tickerType>Normal</tickerType>
         <graphicData>
             <texPath>Unique/FCP_Holy_Hand_Grenade</texPath>

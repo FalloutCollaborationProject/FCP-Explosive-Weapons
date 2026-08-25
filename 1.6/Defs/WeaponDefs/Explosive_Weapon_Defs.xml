@@ -197,6 +197,7 @@
             <texPath>Explosive/FCP_Missile_Launcher</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <equippedAngleOffset>45</equippedAngleOffset>
         <soundInteract>Interact_Rifle</soundInteract>
         <recipeMaker MayRequire="Rick.FCP.Wastelanders">
             <researchPrerequisites>
@@ -279,6 +280,7 @@
             <texPath>Explosive/FCP_Rockwell_Big_Bazooka</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <equippedAngleOffset>45</equippedAngleOffset>
         <soundInteract>Interact_Rifle</soundInteract>
         <recipeMaker MayRequire="Rick.FCP.Wastelanders">
             <researchPrerequisites>
